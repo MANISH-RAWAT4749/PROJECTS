@@ -1,0 +1,93 @@
+import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&family=Rubik+Doodle+Shadow&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    -ms-align-items:center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0e1538;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    -ms-align-items:center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.box h2{
+    color: rgb(226, 226, 226);
+    text-shadow: 2px 2px black;
+    font-size: 8em;
+    z-index: 2;
+}
+.box::before
+{
+    content: '';
+    position: absolute;
+    width: 190px;
+    
+    height: 190%;
+    background: linear-gradient(#00ccff,#d500f9);
+    animation: rotate 4s linear infinite;
+
+}
+@keyframes rotate
+{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    background: #0e1538;
+    inset: 4px;
+    border-radius: 10px;
+    animation: rotate2 4s linear infinite;
+}
+
+@keyframes rotate
+{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate2
+{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(1800deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
